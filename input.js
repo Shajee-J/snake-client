@@ -1,11 +1,6 @@
+const { msg } = require("./constants");
 
 let connection;
-
-let msg = {
-  1: "crazy legs",
-  2: "hungry",
-  3: "soo sleepy"
-};
 
 const handleUserInput = function (data) {
   if (data === '\u0003') {
