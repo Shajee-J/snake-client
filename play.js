@@ -20,3 +20,5 @@ const handleUserInput = function (data) {
     process.exit();
   }
 };
+
+setupInput()
