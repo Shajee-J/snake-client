@@ -10,6 +10,14 @@ const connect = function () {
     console.log(`${data} `)
   });
 
+  conn.on("connect", () => {
+    console.log("welcome to snake hell!")
+  });
+
+  conn.on("connect", () => {
+    conn.write(`Name: MSJ`)
+  })
+
   // interpret incoming data as text
   conn.setEncoding("utf8");
 
