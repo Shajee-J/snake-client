@@ -1,6 +1,12 @@
 
 let connection;
 
+let msg = {
+  1: "crazy legs",
+  2: "hungry",
+  3: "soo sleepy"
+};
+
 const handleUserInput = function (data) {
   if (data === '\u0003') {
     process.exit();
@@ -23,6 +29,19 @@ const handleUserInput = function (data) {
 
   if (data === 's') {
     connection.write("Move: down")
+
+  }
+
+  if (data === "1") {
+    connection.write(`Say: ${msg[1]}`)
+  }
+
+  if (data === "2") {
+    connection.write(`Say: ${msg[2]}`)
+  }
+
+  if (data === "3") {
+    connection.write(`Say: ${msg[3]}`)
 
   }
 };
